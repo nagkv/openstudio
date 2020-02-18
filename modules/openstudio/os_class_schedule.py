@@ -294,13 +294,17 @@ class ClassSchedule:
             class_trend_text_color = 'grey'
             if trend_medium:
                 capacity = ' - ' + T('Capacity filled: ') + str(avg_att_4w_percentage_display) + '%'
-                if avg_att_4w_percentage < trend_medium:
+                # if avg_att_4w_percentage < trend_medium:
+                # gyro --start - end
+                if avg_att_4w_percentage < float(trend_medium):
                     class_trend_text_color = 'text-red'
                 else:
                     class_trend_text_color = 'text-yellow'
             if trend_high:
                 capacity = ' - ' + T('Capacity filled: ') + str(avg_att_4w_percentage_display) + '%'
-                if avg_att_4w_percentage >= trend_high:
+                # if avg_att_4w_percentage >= trend_high:
+                # gyro --start - end
+                if avg_att_4w_percentage >= float(trend_high):
                     class_trend_text_color = 'text-green'
 
             avg_4w_ago_display = DIV(SPAN(int(avg_4w_ago), '/', row.classes.Maxstudents),
