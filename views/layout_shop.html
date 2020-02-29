@@ -211,17 +211,26 @@ desired effect
       <!-- Sidebar Menu -->
       {{ if auth.user: }}
           <ul class="sidebar-menu">
-            <li class="header">{{=T("Account")}}</li>
+            <!-- <li class="header">{{=T("Account")}}</li> -->
+            <!-- gyro --start -->
+            <li class="header hidden">{{=T("About")}}</li>
+            <!-- gyro --end -->            
           </ul>
           {{=LTE_MENU(response.menu_profile, _class='sidebar-menu', li_class='treeview',ul_class='treeview-menu')}}
       {{ pass }}
       <ul class="sidebar-menu">
-        <li class="header">{{=T("Shop")}}</li>
+        <!-- <li class="header">{{=T("Shop")}}</li> -->
+        <!-- gyro --start -->
+        <li class="header hidden">{{=T("Shop")}}</li>
+        <!-- gyro --end -->
       </ul>
         <!-- Optionally, you can add icons to the links -->
       {{=LTE_MENU(response.menu_shop, _class='sidebar-menu', li_class='treeview',ul_class='treeview-menu')}}
       <ul class="sidebar-menu">
-        <li class="header">{{=T("About")}}</li>
+        <!-- <li class="header">{{=T("About")}}</li> -->
+        <!-- gyro --start -->
+        <li class="header hidden">{{=T("About")}}</li>
+        <!-- gyro --end -->        
       </ul>
       {{=LTE_MENU(response.menu_shop_about, _class='sidebar-menu', li_class='treeview',ul_class='treeview-menu')}}
       {{ if response.menu_links: }}

@@ -1,7 +1,7 @@
 {
   "name": "pos",
   "version": "1.0.0",
-  "description": "OpenStudio Point of Sale",
+  "description": "BookMe Point of Sale",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/jest/bin/jest.js",

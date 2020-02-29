@@ -48,7 +48,11 @@ def blank():
     """
     response.view = 'general/only_content.html'
 
-    return dict(content = T('Welcome to OpenStudio'))
+    #return dict(content = T('Welcome to OpenStudio'))
+
+    # gyro --start
+    return dict(content = T('Welcome to BookMe'))
+    # gyro --end
 
 
 ####### Don't mess with the functions below ##########
@@ -246,6 +250,9 @@ def user():
         form = auth()
 
         response.view = 'default/user_login.html'
+        # gyro --start
+        response.title = 'BookMe'
+        # gyro --end
         login_title = T("Log in")
         register_title = T("Create your account")
 

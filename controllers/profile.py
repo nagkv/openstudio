@@ -178,7 +178,10 @@ def index_get_upcoming_classes(customer):
     else:
         header = THEAD(TR(TH(T('Date')),
                           TH(T('Time')),
-                          TH(T('Location')),
+                          # TH(T('Location')),
+                          # gyro --start
+                          TH(T('Location'), _class='hidden-xs'),
+                          # gyro --end
                           TH(T('Class')),
                           TH()))
 
@@ -200,7 +203,10 @@ def index_get_upcoming_classes(customer):
 
             tr = TR(TD(repr_row.classes_attendance.ClassDate),
                     TD(repr_row.classes.Starttime),
-                    TD(repr_row.classes.school_locations_id),
+                    # TD(repr_row.classes.school_locations_id),
+                    # gyro --start
+                    TD(repr_row.classes.school_locations_id, _class='hidden-xs'),
+                    # gyro --end
                     TD(repr_row.classes.school_classtypes_id),
                     TD(cancel))
 
@@ -1373,7 +1379,10 @@ def classes():
     header = THEAD(TR(TH(T('Date')),
                         TH(T('Time')),
                         TH(T('Class')),
-                        TH(T('Location')),
+                        # TH(T('Location')),
+                        # gyro --start
+                        TH(T('Location'), _class='hidden-xs'),
+                        # gyro --end
                         TH(T('Used')),
                         TH(),
                         TH()))
@@ -1402,8 +1411,12 @@ def classes():
         table.append(TR(TD(repr_row.classes_attendance.ClassDate),
                       TD(SPAN(repr_row.classes.Starttime, ' - ', repr_row.classes.Endtime)),
                       TD(repr_row.classes.school_classtypes_id),
-                      TD(repr_row.classes.school_locations_id),
-                      TD(att_type),
+                      # TD(repr_row.classes.school_locations_id),                     
+                      # TD(att_type),
+                      # gyro --start
+                      TD(repr_row.classes.school_locations_id, _class='hidden-xs'),
+                      TD(att_type, _class='hidden-xs'),
+                      # gyro --end                       
                       TD(cancel),
                       TD(status)))
 
