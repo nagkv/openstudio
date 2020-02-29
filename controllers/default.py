@@ -51,7 +51,7 @@ def blank():
     #return dict(content = T('Welcome to OpenStudio'))
 
     # gyro --start
-    return dict(content = T('Welcome to BookMe'))
+    return dict(content = T('Welcome to AerialZone'))
     # gyro --end
 
 
@@ -251,7 +251,7 @@ def user():
 
         response.view = 'default/user_login.html'
         # gyro --start
-        response.title = 'BookMe'
+        response.title = 'AerialZone'
         # gyro --end
         login_title = T("Log in")
         register_title = T("Create your account")

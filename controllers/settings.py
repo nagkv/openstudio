@@ -1103,7 +1103,7 @@ def access_groups():
     response.title = T("Access Settings")
     # response.subtitle = T("OpenStudio user groups")
     # gyro --start
-    response.subtitle = T("BookMe user groups")
+    response.subtitle = T("AerialZone user groups")
     # gyro --end
     response.view = 'general/tabs_menu.html'
 

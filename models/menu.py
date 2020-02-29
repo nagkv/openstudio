@@ -734,7 +734,7 @@ if request.controller == 'shop' or request.controller == 'profile':
 
     #response.logo = SPAN(B('Open'), 'Studio', _class='logo-lg')
     # gyro --start
-    response.logo = SPAN(B('Book'), 'Me', _class='logo-lg')
+    response.logo = SPAN(B('Aerial'), 'Zone', _class='logo-lg')
     # gyro --end
 
     if not request.is_scheduler and not request.is_shell:
